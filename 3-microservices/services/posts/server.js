@@ -13,6 +13,7 @@ app.use(function *(next){
 router.get('/api/posts/in-thread/:threadId', function *() {
   const id = parseInt(this.params.threadId);
   this.body = db.posts.filter((post) => post.thread == id);
+  console.log("this is a pointless commit")
 });
 
 router.get('/api/posts', function *() {
